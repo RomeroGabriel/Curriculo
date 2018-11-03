@@ -1,0 +1,39 @@
+.formContact {
+    border: 2px black solid;
+    border-radius: 8px;
+    background-color: #d3d3d3;
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.formContact-form{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+}
+
+.formContact-form label{
+    margin-bottom: 0.2rem;
+}
+
+.formContact-form input{
+    margin-bottom: 0.7rem;
+    border-radius: 4px;
+}
+
+.formContact h2 {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.formContact-form button {
+    margin-top: 1rem;
+    color: #ffffff;
+    background-color: black;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+}
