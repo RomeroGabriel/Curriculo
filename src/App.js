@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Lista from './List/Lista';
 import FormContact from './FormContact/FormContact';
-import Menu from './Menu/Menu'
+import Menu from './Menu/Menu';
+import axios from 'axios';
 
 class App extends Component {
   state = {
@@ -11,6 +12,12 @@ class App extends Component {
       { info: 'Cabelo', id: 2 }
     ],
     languages: []
+  }
+
+  componentDidMount(){
+    axios.get('').then(res => {
+      console.log(res)
+;    }); 
   }
 
   render() {
