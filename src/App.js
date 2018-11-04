@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './index.css';
-import './reset.css';
 import Lista from './List/Lista';
-import FormContact from './FormContact/FormContact'
+import FormContact from './FormContact/FormContact';
+import Menu from './Menu/Menu'
 
 class App extends Component {
   state = {
@@ -10,24 +9,19 @@ class App extends Component {
       { info: 'Lindo', id: 0 },
       { info: 'Gostoso', id: 1 },
       { info: 'Cabelo', id: 2 }
-    ]
+    ],
+    languages: []
   }
 
   render() {
     return (
-      <div className="container">
-        <div className="menu">
-          <ul>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
+      <div>
+        <Menu />
+        <div className="container">
+          <Lista infos={ this.state.habilidades } title={ 'Habilidades' } />
+          <Lista infos={ this.state.languages } title={ 'Idiomas' } />
+          <FormContact id="contact" />
         </div>
-
-        <div className="content">
-          <h2 className="titles">Habilidades</h2>
-          <Lista infos={this.state.habilidades} />
-        </div>
-
-        <FormContact id="contact" />
       </div>
     );
   }

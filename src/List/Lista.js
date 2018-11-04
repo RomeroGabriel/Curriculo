@@ -1,17 +1,23 @@
 import React from 'react';
-import './List.css';
 
-const Lista = ({ infos }) => {
-    const infoList = infos.map(i => {
-        return i.id > 0 ?
-            (
-                <li>{i.info}</li>
-            ) : null;
-    });
+const Lista = ({ infos, title }) => {
+
+    const infoList = infos.length ?
+        (
+            infos.map(i => {
+                return i.id > 0 ?
+                    (
+                        <li className="collection-item">{i.info}</li>
+                    ) : null;
+            })
+        ) : (
+            <li className="collection-item">Sem informações</li>
+        )
 
     return (
-        <div className="list">
-            <ul>
+        <div>
+            <ul className="collection with-header">
+                <li className="collection-header black"><h4 className="white-text">{title}</h4></li>
                 {infoList}
             </ul>
         </div>
