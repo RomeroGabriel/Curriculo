@@ -1,0 +1,49 @@
+{
+    "informacoes":{
+        "name": "Gabriel Romero",
+        "age": 20,
+        "redes":{
+            "facebook": "",
+            "twitter": "",
+            "gitHub": ""
+        }
+    },
+    
+    "foto":{
+        "link": ""
+    },
+
+    "interesses":{
+
+    },
+    
+    "idiomas":{
+
+    },
+
+    "formacao":{
+
+    },
+
+    "atividades":{
+
+    },
+
+    "habilidades":{
+
+    },
+
+    "blog": {
+
+    },
+
+    "portfolio":{
+
+    },
+
+    "biografias":{
+        "mini": "",
+        "completa": "",
+        "contatoProfissao": ""
+    }
+}
