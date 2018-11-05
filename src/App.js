@@ -5,6 +5,7 @@ import Languages from './Languages/Languages'
 import Menu from './Menu/Menu';
 import axios from 'axios';
 import Presentation from './Presentation/Presentation';
+import Blog from './Blog/Blog';
 
 class App extends Component {
   state = {
@@ -13,7 +14,8 @@ class App extends Component {
     imgUser: '',
     formation: [],
     exercice: [],
-    skills: []
+    skills: [],
+    Blog: []
   }
 
   componentDidMount() {
@@ -24,7 +26,8 @@ class App extends Component {
         imgUser: res.data.informacoes.foto,
         formation: res.data.formacao,
         exercice: res.data.atividades,
-        skills: res.data.habilidades
+        skills: res.data.habilidades,
+        Blog: res.data.blog
       });
     });
   }
@@ -40,7 +43,8 @@ class App extends Component {
           <Lista infos={ this.state.formation } title={ 'Formação' } />
           <Lista infos={ this.state.exercice } title={ 'Atividades' } />
           <Lista infos={ this.state.skills } title={ 'Habilidades' } />
-          <FormContact id="contact" />
+          <Blog post={ this.state.Blog }/>
+          <FormContact id="contact" />  
         </div>
       </div>
     );
