@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Lista = ({ infos, title }) => {
+const Languages = ({ lang, title }) => {
 
-    const infoList = infos.length ?
+    const List = lang.length ?
         (
-            infos.map(i => {
-                return <li className="collection-item">{i}</li>
+            lang.map(l => {
+                return <li className="collection-item">{ l.idioma }  - Nível: { l.nivel }</li>
             })
         ) : (
             <li className="collection-item">Sem informações</li>
@@ -15,10 +15,10 @@ const Lista = ({ infos, title }) => {
         <div>
             <ul className="collection with-header">
                 <li className="collection-header black"><h4 className="white-text">{title}</h4></li>
-                {infoList}
+                {List}
             </ul>
         </div>
     )
 };
 
-export default Lista;
+export default Languages;
