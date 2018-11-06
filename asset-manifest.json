@@ -1,13 +1,14 @@
 {
-  "main.css": "/Curriculo/static/css/main.a31705e4.chunk.css",
-  "main.js": "/Curriculo/static/js/main.745cee09.chunk.js",
-  "main.js.map": "/Curriculo/static/js/main.745cee09.chunk.js.map",
-  "static/js/1.4df8fbb3.chunk.js": "/Curriculo/static/js/1.4df8fbb3.chunk.js",
-  "static/js/1.4df8fbb3.chunk.js.map": "/Curriculo/static/js/1.4df8fbb3.chunk.js.map",
+  "main.css": "/Curriculo/static/css/main.29cd23b1.chunk.css",
+  "main.js": "/Curriculo/static/js/main.90fd0948.chunk.js",
+  "main.js.map": "/Curriculo/static/js/main.90fd0948.chunk.js.map",
+  "static/js/1.b67fb251.chunk.js": "/Curriculo/static/js/1.b67fb251.chunk.js",
+  "static/js/1.b67fb251.chunk.js.map": "/Curriculo/static/js/1.b67fb251.chunk.js.map",
   "runtime~main.js": "/Curriculo/static/js/runtime~main.a3ee2dd7.js",
   "runtime~main.js.map": "/Curriculo/static/js/runtime~main.a3ee2dd7.js.map",
-  "static/css/main.a31705e4.chunk.css.map": "/Curriculo/static/css/main.a31705e4.chunk.css.map",
+  "static/media/Linkedin.png": "/Curriculo/static/media/Linkedin.94393125.png",
+  "static/css/main.29cd23b1.chunk.css.map": "/Curriculo/static/css/main.29cd23b1.chunk.css.map",
   "index.html": "/Curriculo/index.html",
-  "precache-manifest.c34d91ee2ac6436861aac0f2efbba715.js": "/Curriculo/precache-manifest.c34d91ee2ac6436861aac0f2efbba715.js",
+  "precache-manifest.57e1195b8b99e3724c3cb58bb22ad631.js": "/Curriculo/precache-manifest.57e1195b8b99e3724c3cb58bb22ad631.js",
   "service-worker.js": "/Curriculo/service-worker.js"
 }
