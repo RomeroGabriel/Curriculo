@@ -10,7 +10,6 @@ const Blog = ({ post }) => {
                         <div className="card horizontal">
                             <div className="card-image">
                                 <img className="responsive-img" src={p.image} alt="imagem noticia"></img>
-
                             </div>
                             <div className="card-content">
                                 <span className="card-title blue-text">{p.title}</span>

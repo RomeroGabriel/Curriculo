@@ -17,13 +17,12 @@ class FormContact extends Component {
 
     formSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
     }
 
     render(){
         return (
-            <div className="formContact">
-                <h2>Entre em contato!</h2>
+            <div className="row">
+                <h2 className="center">Entre em contato!</h2>
                 <form className="formContact-form" onSubmit={ this.formSubmit }>
                     <label htmlFor="name">Nome:</label>
                     <input type="text" id="name" onChange={ this.changeValue }></input>
