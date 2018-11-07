@@ -1,19 +1,23 @@
 import React from 'react';
-
+import './Blog.css'
 const Blog = ({ post }) => {
 
     const posts = post.length ?
         (
             post.map(p => {
                 return (
-                    < div className="col s12 m12 l12" >
-                        <div className="card horizontal">
+                    < div className="col s12 m6 l6" >
+                        <div className="card">
                             <div className="card-image">
-                                <img className="responsive-img" src={p.image} alt="imagem noticia"></img>
+                                <img className="responsive-img imagens" src={p.image} alt="imagem noticia"></img>
                             </div>
                             <div className="card-content">
                                 <span className="card-title blue-text">{p.title}</span>
-                                <p>{p.content}</p>
+                                <h6 className="black-text">Criado em {p.data} por Gabriel Romero</h6>
+                                <p><br />{p.content}</p>
+                            </div>
+                            <div className="card-action">
+                                <a href={ p.url }>VEJA MAIS</a>
                             </div>
                         </div>
                     </div >
@@ -25,7 +29,6 @@ const Blog = ({ post }) => {
 
     return (
         <div className="row grey lighten-1" id="blog">
-            <h2 className="blue-text lighten-1">Blog</h2>
             {posts}
         </div>
     );

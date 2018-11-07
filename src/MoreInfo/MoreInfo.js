@@ -1,7 +1,7 @@
 import React from 'react';
 
-const moreInfor = ({ moreInfo }) => {
-    const infos = moreInfo.length ?
+const moreInfor = ({  }) => {
+    const infos = 
         (<div>
             <div className="col s12 m6 l6">
                 <h2 className="black-text">Biografia</h2>
@@ -23,10 +23,7 @@ const moreInfor = ({ moreInfo }) => {
                 </p>
             </div>
         </div>
-        ) :
-        (
-            <p className="center">Sem Informações</p>
-        );
+        )
 
     return (
         <div className="row grey lighten-1" id="history">

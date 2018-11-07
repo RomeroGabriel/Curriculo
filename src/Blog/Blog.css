@@ -1,0 +1,5 @@
+.imagens{
+    max-width: 100% !important;
+    height: 195px !important;
+    object-fit: contain !important;
+}

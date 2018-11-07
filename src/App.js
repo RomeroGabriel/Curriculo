@@ -10,6 +10,7 @@ import Portfolio from './Portfolio/Portfolio';
 import MoreInfo from './MoreInfo/MoreInfo';
 import SocialMedia from './SocialMedia/SocialMedia';
 import Footer from './Footer/Footer';
+import Skills from './Skills/Skills';
 
 class App extends Component {
   state = {
@@ -56,7 +57,7 @@ class App extends Component {
             <Lista infos={this.state.exercice} title={'Atividades'} />
           </div>
 
-          <Lista infos={this.state.skills} title={'Habilidades'} />
+          <Skills skills={this.state.skills} title={'Habilidades'} />
           <Blog post={this.state.Blog} />
           <Portfolio ports={this.state.Ports} />
           <MoreInfo moreInfo={this.state.More} />
