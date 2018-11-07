@@ -5,7 +5,7 @@ import './SocialMedia.css';
 
 const SocialMedia = ({ media }) => {
     return (
-        <div className="row">
+        <div className="row" id="social">
             <h2 className="center">Redes Sociais</h2>
             <div className="col s12 m6 l6">
                 <div className="center">

@@ -29,7 +29,7 @@ const moreInfor = ({ moreInfo }) => {
         );
 
     return (
-        <div className="row grey lighten-1">
+        <div className="row grey lighten-1" id="history">
             <h2 className="blue-text lighten-1 center">Mais Informações</h2>
             {infos}
         </div>

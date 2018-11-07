@@ -24,7 +24,7 @@ const Blog = ({ post }) => {
         );
 
     return (
-        <div className="row grey lighten-1">
+        <div className="row grey lighten-1" id="blog">
             <h2 className="blue-text lighten-1">Blog</h2>
             {posts}
         </div>

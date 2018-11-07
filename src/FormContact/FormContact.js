@@ -21,7 +21,7 @@ class FormContact extends Component {
 
     render(){
         return (
-            <div className="row">
+            <div className="row" id="contact">
                 <h2 className="center">Entre em contato!</h2>
                 <form className="formContact-form" onSubmit={ this.formSubmit }>
                     <label htmlFor="name">Nome:</label>

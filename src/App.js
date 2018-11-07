@@ -48,19 +48,23 @@ class App extends Component {
         <Menu />
         <div className="container">
           <Presentation img={this.state.imgUser} title={"Apresentação"} />
-          <Lista infos={this.state.interest} title={'Interesses'} />
-          <Languages lang={this.state.languages} title={'Idiomas'} />
-          <Lista infos={this.state.formation} title={'Formação'} />
-          <Lista infos={this.state.exercice} title={'Atividades'} />
+          <div className="row">
+            <h2 id="informa">Informações</h2>
+            <Lista infos={this.state.interest} title={'Interesses'} />
+            <Languages lang={this.state.languages} title={'Idiomas'} />
+            <Lista infos={this.state.formation} title={'Formação'} />
+            <Lista infos={this.state.exercice} title={'Atividades'} />
+          </div>
+
           <Lista infos={this.state.skills} title={'Habilidades'} />
           <Blog post={this.state.Blog} />
           <Portfolio ports={this.state.Ports} />
           <MoreInfo moreInfo={this.state.More} />
           <SocialMedia media={this.state.Media} />
-          <FormContact id="contact" />
+          <FormContact />
         </div>
         <Footer />
-      </div>
+      </div >
     );
   }
 }

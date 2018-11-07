@@ -12,7 +12,7 @@ const Languages = ({ lang, title }) => {
         )
 
     return (
-        <div>
+        <div className="col s12 m6 l6">
             <ul className="collection with-header">
                 <li className="collection-header black"><h4 className="white-text">{title}</h4></li>
                 {List}

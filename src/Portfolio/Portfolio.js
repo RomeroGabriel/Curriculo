@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Portfolio = ({ ports }) => {
-
-
     const portfolios = ports.length ?
         (
             ports.map(p => {
@@ -14,13 +12,15 @@ const Portfolio = ({ ports }) => {
                                 <div className="divider"></div>
                                 <p>{p.description}</p>
                                 <span className="card-title">Tecnologias usadas</span>
-                                {p.technology.map(t => {
-                                    return (
-                                        <ul className="collection">
-                                            <li className="collection-item">{t}</li>
-                                        </ul>
-                                    );
-                                }) }
+                                <ul>
+                                    {p.technology.map(t => {
+                                        return (
+
+                                            <li style={{ listStyleType: 'circle', listStylePosition: 'inside' }} >{t}</li>
+
+                                        );
+                                    })}
+                                </ul>
                                 <p>Local de desenvolvimento: {p.where}</p>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ const Portfolio = ({ ports }) => {
         )
 
     return (
-        <div className="row grey lighten-1">
+        <div className="row grey lighten-1" id="port">
             <h2 className="blue-text lighten-1">Portfolio</h2>
             {portfolios}
         </div>
