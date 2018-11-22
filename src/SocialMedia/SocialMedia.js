@@ -1,20 +1,20 @@
 import React from 'react';
 import GitHub from '../GitHub.png'
-import Linkedin from '../Linkedin.png'
+import linkedin from '../Linkedin.png'
 import './SocialMedia.css';
 
-const SocialMedia = ({ media }) => {
+const SocialMedia = ({ Linkedin, Github }) => {
     return (
         <div className="row" id="social">
             <h2 className="center">Redes Sociais</h2>
             <div className="col s12 m6 l6">
                 <div className="center">
-                    <a href={media.gitHub}><img className="responsive-img media" src={GitHub} alt="GitHub"></img></a>
+                    <a href={Github}><img className="responsive-img media" src={GitHub} alt="GitHub"></img></a>
                 </div>
             </div>
             <div className="col s12 m6 l6">
                 <div className="center">
-                    <a href={media.linkedin}><img className="responsive-img media" src={Linkedin} alt="linkedin"></img></a>
+                    <a href={Linkedin}><img className="responsive-img media" src={linkedin} alt="linkedin"></img></a>
                 </div>
             </div>
         </div>

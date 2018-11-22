@@ -23,7 +23,10 @@ class App extends Component {
     Blog: [],
     Ports: [],
     More: [],
-    Media: []
+    Media: [],
+    miniBiografia: [],
+    completaBio: [],
+    contatoProfissao: []
   }
 
   componentDidMount() {
@@ -32,8 +35,13 @@ class App extends Component {
         imgUser: res.data.informacoes.foto,
         Blog: res.data.blog,
         Ports: res.data.portfolio,
-        More: res.data.MaisInformacoes,
-        Media: res.data.informacoes.redes
+      });
+    });
+
+    axios.get('http://localhost:3001/rede/getLast').then(res => {
+      this.setState({
+        Linkedin: res.data.linkedin,
+        Github: res.data.github
       });
     });
 
@@ -66,6 +74,19 @@ class App extends Component {
         skills: res.data.map(d => d.habilidade)
       });
     });
+
+    axios.get('http://localhost:3001/biografia/getLast').then(res => {
+      this.setState({
+        miniBiografia: res.data.mini,
+        completaBio: res.data.inteira
+      });
+    });
+
+    axios.get('http://localhost:3001/contatoProfissao/getLast').then(res => {
+      this.setState({
+        contatoProfissao: res.data.profissao
+      });
+    });
   }
 
   render() {
@@ -73,7 +94,7 @@ class App extends Component {
       <div>
         <Menu />
         <div className="container">
-          <Presentation img={this.state.imgUser} title={"Apresentação"} />
+          <Presentation img={this.state.imgUser} title={"Apresentação"} miniBiografia= { this.state.miniBiografia } />
           <div className="row">
             <h2 id="informa">Informações</h2>
             <Lista infos={this.state.interest} title={'Interesses'} />
@@ -85,8 +106,8 @@ class App extends Component {
           <Skills skills={this.state.skills} title={'Habilidades'} />
           <Blog post={this.state.Blog} />
           <Portfolio ports={this.state.Ports} />
-          <MoreInfo moreInfo={this.state.More} />
-          <SocialMedia media={this.state.Media} />
+          <MoreInfo completaBio={ this.state.completaBio } contatoProfissao={ this.state.contatoProfissao } />
+          <SocialMedia Linkedin={ this.state.Linkedin } Github={ this.state.Github }/>
           <FormContact />
         </div>
         <Footer />
