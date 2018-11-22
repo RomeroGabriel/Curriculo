@@ -29,16 +29,41 @@ class App extends Component {
   componentDidMount() {
     axios.get('https://romerogabriel.github.io/API-Curriculo/RomeroGabriel.io/json/romero.json').then(res => {
       this.setState({
-        interest: res.data.interesses,
-        languages: res.data.idiomas,
         imgUser: res.data.informacoes.foto,
-        formation: res.data.formacao,
-        exercice: res.data.atividades,
-        skills: res.data.habilidades,
         Blog: res.data.blog,
         Ports: res.data.portfolio,
         More: res.data.MaisInformacoes,
         Media: res.data.informacoes.redes
+      });
+    });
+
+    axios.get('http://localhost:3001/formacao/getAll').then(res => {
+      this.setState({
+        formation: res.data.map(d => d.informacao)
+      });
+    });
+
+    axios.get('http://localhost:3001/interesse/getAll').then(res => {
+      this.setState({
+        exercice: res.data.map(d => d.informacao)
+      });
+    });
+
+    axios.get('http://localhost:3001/atividade/getAll').then(res => {
+      this.setState({
+        interest: res.data.map(d => d.informacao)
+      });
+    });
+
+    axios.get('http://localhost:3001/idioma/getAll').then(res => {
+      this.setState({
+        languages: res.data
+      });
+    });
+
+    axios.get('http://localhost:3001/habilidade/getAll').then(res => {
+      this.setState({
+        skills: res.data.map(d => d.habilidade)
       });
     });
   }
