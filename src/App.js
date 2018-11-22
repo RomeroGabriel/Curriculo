@@ -34,7 +34,13 @@ class App extends Component {
       this.setState({
         imgUser: res.data.informacoes.foto,
         Blog: res.data.blog,
-        Ports: res.data.portfolio,
+      });
+    });
+
+    axios.get('http://localhost:3001/port/getAll').then(res => {
+      console.log(res.data);
+      this.setState({
+        Ports: res.data
       });
     });
 

@@ -9,19 +9,9 @@ const Portfolio = ({ ports }) => {
                         <div className="card">
                             <div className="card-content">
                                 <h4>{p.title}</h4>
+                                <p>{p.date}</p>
                                 <div className="divider"></div>
                                 <p>{p.description}</p>
-                                <span className="card-title">Tecnologias usadas</span>
-                                <ul>
-                                    {p.technology.map(t => {
-                                        return (
-
-                                            <li style={{ listStyleType: 'circle', listStylePosition: 'inside' }} >{t}</li>
-
-                                        );
-                                    })}
-                                </ul>
-                                <p>Local de desenvolvimento: {p.where}</p>
                             </div>
                         </div>
                     </div>
