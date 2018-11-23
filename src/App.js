@@ -58,13 +58,13 @@ class App extends Component {
 
     axios.get('http://localhost:3001/interesse/getAll').then(res => {
       this.setState({
-        exercice: res.data.map(d => d.informacao)
+        interest: res.data.map(d => d.informacao)
       });
     });
 
     axios.get('http://localhost:3001/atividade/getAll').then(res => {
       this.setState({
-        interest: res.data.map(d => d.informacao)
+        exercice: res.data.map(d => d.informacao)
       });
     });
 
