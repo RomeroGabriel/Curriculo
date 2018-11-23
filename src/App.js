@@ -38,7 +38,6 @@ class App extends Component {
     });
 
     axios.get('http://localhost:3001/port/getAll').then(res => {
-      console.log(res.data);
       this.setState({
         Ports: res.data
       });

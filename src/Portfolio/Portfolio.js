@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 const Portfolio = ({ ports }) => {
     const portfolios = ports.length ?
@@ -9,7 +10,7 @@ const Portfolio = ({ ports }) => {
                         <div className="card">
                             <div className="card-content">
                                 <h4>{p.title}</h4>
-                                <p>{p.date}</p>
+                                <p>Data: <Moment format="DD/MM/YYYY" >{p.date}</Moment></p>
                                 <div className="divider"></div>
                                 <p>{p.description}</p>
                             </div>
